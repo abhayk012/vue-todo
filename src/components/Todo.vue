@@ -17,7 +17,8 @@
           <button class="btn btn-danger ms-3" @click="removeTodo(index)">x</button>
         </div>
         <div v-else>
-          <input v-model="editText" placeholder="Edit todo" />
+          <input v-model="editText" placeholder="Edit todo" @keyup.enter="saveTodo"  />
+          
          
           <button class="btn btn-success ms-3" @click="saveTodo" ref="saveButton" >Save</button>
           <button class="btn btn-danger ms-3" @click="cancelEdit">Cancel</button>
