@@ -10,7 +10,7 @@
           <span :class="{ done: todo.done }">
             {{ todo.text }}
           </span>
-          <button class="btn btn-success ms-5" @click="editTodo(index)" display="none">Edit</button>
+          
           <button class="btn btn-info ms-3" @click="toggleDone(index)">
             {{ todo.done ? 'Undo' : 'Complete' }}
           </button>
