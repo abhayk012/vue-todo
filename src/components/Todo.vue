@@ -2,7 +2,7 @@
   <div class="todo-list" @keyup.enter="handleEnterKey">
     <h1>Todo List</h1>
     <input v-model="newTodo" placeholder="Add a new todo" />
-    <button class="btn btn-success" ref="addButton" @click="addTodo" >Add</button>
+    <button class="btn btn-outline-success" ref="addButton" @click="addTodo" >Add</button>
     
     <ul>
       <li v-for="(todo, index) in todos" :key="index">
@@ -18,8 +18,8 @@
         </div>
         <div v-else>
           <input v-model="editText" placeholder="Edit todo" />
-          <button ref="saveButton" @click="saveTodo" style="display:none;">Save</button>
-          <button class="btn btn-success ms-3" @click="saveTodo">Save</button>
+         
+          <button class="btn btn-success ms-3" @click="saveTodo" ref="saveButton" >Save</button>
           <button class="btn btn-danger ms-3" @click="cancelEdit">Cancel</button>
         </div>
       </li>
